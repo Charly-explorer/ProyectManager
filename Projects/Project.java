@@ -4,10 +4,44 @@
  */
 package Projects;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Student
  */
 public class Project {
+    
+    private int id;
+    private String name;
+    private ArrayList<Task> tasks;
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<Task> getTasks() {
+        return tasks;
+    }
+
+    public Project(int id, String name, ArrayList<Task> tasks) {
+        this.id = id;
+        this.name = name;
+        this.tasks = tasks;
+    }
+
+    public Project() {
+        this(0,"", new ArrayList<Task>());
+    }
+    
+    
     
 }
