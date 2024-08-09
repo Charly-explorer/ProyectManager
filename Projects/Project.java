@@ -4,6 +4,7 @@
  */
 package Projects;
 
+import Taks.Task;
 import java.util.ArrayList;
 
 /**
@@ -11,7 +12,7 @@ import java.util.ArrayList;
  * @author Student
  */
 public class Project {
-    
+
     private int id;
     private String name;
     private ArrayList<Task> tasks;
@@ -39,9 +40,29 @@ public class Project {
     }
 
     public Project() {
-        this(0,"");
+        this(0, "");
     }
-    
-    
-    
+
+    public int NumTasks() {
+        return tasks.size();
+    }
+
+    public int NumTaskCompleted() {
+        int num = 0;
+
+        for (Task task : tasks) {
+            if (task.isComplete()) {
+                num += 1;
+            }
+        }
+        return num;
+    }
+
+    public int TaskCompletedPorcent() {
+        int num;
+
+        num = (100 / tasks.size()) * NumTaskCompleted();
+
+        return num;
+    }
 }
