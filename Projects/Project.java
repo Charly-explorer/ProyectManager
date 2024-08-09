@@ -43,6 +43,10 @@ public class Project {
         this(0, "");
     }
 
+    public void FindTask(Task task) {
+        int num = 0;
+    }
+
     public int NumTasks() {
         return tasks.size();
     }
