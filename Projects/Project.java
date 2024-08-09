@@ -32,14 +32,14 @@ public class Project {
         return tasks;
     }
 
-    public Project(int id, String name, ArrayList<Task> tasks) {
+    public Project(int id, String name) {
         this.id = id;
         this.name = name;
-        this.tasks = tasks;
+        this.tasks = new ArrayList<Task>();
     }
 
     public Project() {
-        this(0,"", new ArrayList<Task>());
+        this(0,"");
     }
     
     
