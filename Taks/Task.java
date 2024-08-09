@@ -47,6 +47,14 @@ public class Task {
     public Task(){
         this(0,"",false, new User());
     }
-   
+   public void addComment(Comment comment) {
+        if (comment != null) {
+            list.add(comment);
+        }
+    }
+
+    public boolean removeComment(Comment comment) {
+        return list.remove(comment);
+    }
 }
 
